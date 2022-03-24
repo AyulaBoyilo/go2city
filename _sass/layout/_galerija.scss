@@ -7,12 +7,24 @@
   grid-template-columns: repeat(7, 1fr);
   margin: 0 auto 100px;
   
-  @include for-tablet {
+  @include for-phone {
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+    padding: 0 20px;
+    margin: 0 auto 50px;
+  }
+
+  @include for-tablet {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 0 50px;
   }
   
   @include for-desktop {
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+    margin-left: 7%;
+    margin-right: 7%;
   }
 
   @include for-widescreen {
@@ -39,6 +51,21 @@
 .galerija__image {
   max-width: 10vw;
   
+  @include for-phone {
+    width: 100%;
+    max-width: initial;
+  }
+
+  @include for-desktop {
+    width: 100%;
+    max-width: initial;
+  }
+
+  @include for-tablet {
+    width: 100%;
+    max-width: initial;
+  }
+
   @include for-widescreen {
     max-width: 20vw;
   }

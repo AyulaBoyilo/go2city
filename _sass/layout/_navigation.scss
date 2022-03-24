@@ -67,7 +67,12 @@
 
   @include for-widescreen {
     font-size: 22px;
-    width: fit-content;
+    width: 260px;
+  }
+
+  @include for-largescreen {
+    font-size: 22px;
+    width: 260px;
   }
 
   @include for-fullhd {
@@ -109,4 +114,12 @@
   height: 1px;
   margin-bottom: 100px;
   width: 100vw;
+
+  @include for-phone {
+    margin-bottom: 40px;
+  }
+
+  @include for-tablet {
+    margin-bottom: 50px;
+  }
 }

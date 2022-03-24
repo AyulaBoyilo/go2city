@@ -667,9 +667,13 @@ body {
 @media (min-width: 1366px) and (max-width: 1500px) {
   .nav__title {
     font-size: 22px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 260px;
+  }
+}
+@media (min-width: 1500px) and (max-width: 1640px) {
+  .nav__title {
+    font-size: 22px;
+    width: 260px;
   }
 }
 @media (min-width: 1640px) {
@@ -720,6 +724,16 @@ body {
   margin-bottom: 100px;
   width: 100vw;
 }
+@media (max-width: 767px) {
+  .nav__underline {
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nav__underline {
+    margin-bottom: 50px;
+  }
+}
 
 .galerija__wrapper {
   display: -ms-grid;
@@ -729,14 +743,30 @@ body {
   grid-template-columns: repeat(7, 1fr);
   margin: 0 auto 100px;
 }
+@media (max-width: 767px) {
+  .galerija__wrapper {
+    -ms-grid-columns: 1fr 15px 1fr 15px 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 0 20px;
+    margin: 0 auto 50px;
+  }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   .galerija__wrapper {
+    -ms-grid-columns: 1fr 15px 1fr 15px 1fr 15px 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
+    padding: 0 50px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1366px) {
   .galerija__wrapper {
+    -ms-grid-columns: 1fr 30px 1fr 30px 1fr 30px 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+    margin-left: 7%;
+    margin-right: 7%;
   }
 }
 @media (min-width: 1366px) and (max-width: 1500px) {
@@ -766,6 +796,24 @@ body {
 
 .galerija__image {
   max-width: 10vw;
+}
+@media (max-width: 767px) {
+  .galerija__image {
+    width: 100%;
+    max-width: initial;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .galerija__image {
+    width: 100%;
+    max-width: initial;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .galerija__image {
+    width: 100%;
+    max-width: initial;
+  }
 }
 @media (min-width: 1366px) and (max-width: 1500px) {
   .galerija__image {
