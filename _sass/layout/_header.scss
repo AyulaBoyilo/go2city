@@ -1,0 +1,140 @@
+@use '../utilities/' as *;
+@use '../base/' as *;
+
+.header {
+    background: url('../assets/images/header.jpg') no-repeat center / cover;
+    display: flex;
+    align-items: flex-end;
+    font-family: $family-primary;
+    height: 45vw;
+    margin-bottom: 122px;
+
+    @include for-phone {
+        height: 275px;
+        margin-bottom: 300px;
+    }
+}
+
+.header__content__wrapper {
+    align-items: center;
+    bottom: -80px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+
+    @include for-phone {
+        bottom: -270px;
+    }
+}
+
+.header__title {
+    color: white;
+    font-size: 100px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.5px #707070;
+    
+    
+    @include for-phone {
+        font-size: 40px;
+        letter-spacing: 2.4px;
+        padding-right: 0;
+        padding-left: 30px;
+        line-height: 35px;
+        margin-bottom: 50px;
+    }
+
+    @include for-desktop {
+        font-size: 70px;
+        padding-right: 0;
+    }
+
+    @include for-widescreen {
+        font-size: 70px;
+        padding-right: 0;
+    }
+    
+    @include for-largescreen {
+        font-size: 70px;
+        padding-right: 0;
+    }
+    
+    @include for-fullhd {
+        padding-right: 138px;
+    }
+    
+
+    @include for-tablet {
+        font-size: 40px;
+        padding-right: 0;
+    }
+}
+
+.header__text {
+    background-color: rgba($color: #fff, $alpha: .76);
+    color: $mid-gray;
+    font-size: 22px;
+    letter-spacing: 1.32px;
+    margin-right: 260px;
+    padding: 11px 33px 11px 14px;
+    position: relative;
+    z-index: 1;
+    
+    
+    @include for-fullhd {
+        margin-right: 260px;
+        width: 691px;
+    }
+
+    @include for-desktop {
+        margin-right: 0;
+        width: 70%;
+    }
+
+    @include for-widescreen {
+        margin-right: 0;
+        width: 60%;
+    }
+    
+    @include for-largescreen {
+        margin-right: 0;
+        width: 50%;
+    }
+
+    @include for-tablet {
+        font-size: 14px;
+        margin-right: 0;
+        width: 65%;
+    }
+
+    @include for-phone {
+        font-size: 14px;
+        margin-right: 0;
+        width: 85%;
+    }
+
+    &::before {
+        background-color: rgba($color: #fff, $alpha: .63);
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+
+        @include for-phone {
+            background-color: rgba($color: #707070, $alpha: .19);
+        }
+    }
+}
+
+.header__link {
+    color: $water-blue;
+    text-decoration: underline;
+
+    &:hover {
+        color: $deep-sky-blue;
+    }
+}

@@ -1,0 +1,163 @@
+@use '../utilities' as *;
+@use '../base/typography' as *;
+
+// Info section
+.info {
+  color: black;
+  font-family: $family-tertiary;
+  font-size: 16px;
+  line-height: 40px;
+  margin: 0 auto 150px;
+  text-align: center;
+  width: 762px;
+
+  @include for-phone {
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0 auto 50px;
+    width: 80vw;
+  }
+
+  @include for-tablet {
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0 auto 50px;
+    width: 60vw;
+  }
+
+  a {
+    color: $deep-sky-blue;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+}
+
+.footer {
+    background: url('../assets/images/footer_bg.jpg') no-repeat center / cover;
+    margin: 35px;
+    padding-top: 100px;
+
+    @include for-widescreen {
+      background-color: $light-pink !important;
+    }
+
+    @include for-tablet {
+      padding: 0px 0 60px !important;
+    }
+  
+    @include for-phone {
+      padding: 0 0 20px!important;
+    }
+  }
+
+  .branding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      height: auto;
+      width: 11vw;
+    }
+
+    a:first-of-type {
+      height: auto;
+      width: 11vw;
+    }
+
+    @include for-phone {
+      a {
+        height: auto;
+        width: 35vw;
+      }
+  
+      a:first-of-type {
+        height: auto;
+        width: 35vw;
+      }
+    }
+  }
+  
+  .container-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h6 {
+      color: white;
+      padding: 10px;
+      font-family: $family-tertiary;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 34px auto 47px;
+      text-transform: uppercase;
+    }
+
+    a {
+      margin: 0 10px;
+    }
+
+    @include for-fullhd {
+      font-size: 20px;
+      flex-direction: column;
+    }
+  
+    @include for-desktop {
+      font-size: 20px;
+      flex-direction: column;
+    }
+
+    @include for-tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+
+      .branding {
+        a {
+          height: auto;
+          width: 20vw;
+        }
+    
+        a:first-of-type {
+          height: auto;
+          width: 20vw;
+        }
+      }
+    }
+  
+    @include for-phone {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+  
+      .branding {
+        display: flex;
+        max-width: 70vw;
+      }
+    }
+
+    @media screen and (min-width: 1500px) {
+      // flex-direction: row;
+
+      .branding {
+        display: flex;
+        max-width: 70vw;
+
+        a {
+          height: auto;
+          width: 11vw;
+        }
+  
+        a:first-of-type {
+          height: auto;
+          width: 11vw;
+        }
+      }
+    }
+  }

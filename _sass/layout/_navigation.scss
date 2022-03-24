@@ -1,0 +1,112 @@
+@use '../utilities/' as *;
+@use '../base/' as *;
+
+.nav__wrapper {
+  display: flex;
+  height: 97px;
+
+  @include for-tablet {
+    height: 67px;
+  }
+
+  @include for-phone {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  a {
+    color: black;
+
+    &:hover, &:visited, &:active {
+      color: black;
+    }
+  }
+}
+
+.nav__left, .nav__middle, .nav__right {
+  width: 33.33%;
+}
+
+.nav__middle {
+  justify-content: center;
+  display: flex;
+}
+
+.nav__right {
+  align-items: flex-start;
+  display: flex;
+
+  @include for-phone {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.nav__title {
+  border-bottom: .5px solid black;
+  font-family: $family-primary;
+  font-size: 25px;
+  height: fit-content;
+  letter-spacing: 1.5px;
+  line-height: .7;
+  margin-top: 18px;
+  padding-bottom: 5px;
+  text-align: center;
+  width: 260px;
+
+  @include for-tablet {
+    font-size: 22px;
+    width: fit-content;
+  }
+
+  @include for-desktop {
+    font-size: 22px;
+    width: fit-content;
+  }
+
+  @include for-widescreen {
+    font-size: 22px;
+    width: fit-content;
+  }
+
+  @include for-fullhd {
+    font-size: 22px;
+    width: 260px;
+  }
+}
+
+.nav__link {
+  font-family: $family-quaternary;
+  font-size: 14px;
+  margin-left: 15px;
+  padding-top: 24px;
+
+  @include for-phone {
+    padding-top: 15px;
+  }
+}
+
+.nav__location_icon {
+  padding-top: 22px;
+
+  @include for-phone {
+    padding-top: 10px;
+    transform: scale(.7);
+  }
+
+  @include for-tablet {
+    transform: scale(.8);
+  }
+
+  @include for-widescreen {
+    transform: scale(.5);
+  }
+}
+
+.nav__underline {
+  background-color: $mid-gray;
+  height: 1px;
+  margin-bottom: 100px;
+  width: 100vw;
+}

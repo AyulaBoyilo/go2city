@@ -1,0 +1,45 @@
+@use '../utilities/' as *;
+@use '../base/' as *;
+
+.galerija__wrapper {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(7, 1fr);
+  margin: 0 auto 100px;
+  
+  @include for-tablet {
+    gap: 15px;
+  }
+  
+  @include for-desktop {
+    gap: 30px;
+  }
+
+  @include for-widescreen {
+    grid-template-columns: repeat(5, 1fr);
+    margin-left: 7%;
+    margin-right: 7%;
+    gap: 30px;
+  }
+
+  @include for-largescreen {
+    margin-left: 7%;
+    margin-right: 7%;
+    max-width: calc(100vw - 14%);
+    gap: 30px;
+  }
+
+  @include for-fullhd {
+    width: calc(100vw - 14%);
+    max-width: 1640px;
+    gap: 30px;
+  }
+}
+
+.galerija__image {
+  max-width: 10vw;
+  
+  @include for-widescreen {
+    max-width: 20vw;
+  }
+}

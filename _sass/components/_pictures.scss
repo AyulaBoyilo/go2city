@@ -1,0 +1,70 @@
+@use '../utilities/' as *;
+@use '../base/' as *;
+
+.pictures__wrapper {
+  display: flex;
+  gap: 16px;
+  margin: 75px auto 122px;
+  max-width: 1640px;
+  overflow: hidden;
+  font-family: $family-primary;
+  font-size: 16px;
+  letter-spacing: .96px;
+
+  @include for-phone {
+    margin: 50px auto;
+    font-size: 14px;
+  }
+
+  @include for-tablet {
+    align-items: center;
+    margin: 50px auto;
+    font-size: 14px;
+  }
+}
+
+.picture__main {
+  display: flex;
+  flex-direction: column;
+  max-width: 49.5%;
+
+  img {
+    margin-bottom: 14px;
+  }
+}
+
+.picture__left {
+  position: relative;
+  top: -695px;
+  width: 24%;
+
+  @include for-phone {
+    top: 50px;
+  }
+
+  @include for-tablet {
+    top: initial;
+  }
+}
+
+.picture__right {
+  position: relative;
+  // top: -695px;
+  // bottom: 485px;
+  top: 695px;
+  top: 570px;
+  width: 24%;
+
+  @include for-phone {
+    top: 100px;
+  }
+
+  @include for-tablet {
+    top: initial;
+  }
+}
+
+.picture__caption {
+  font-family: $family-primary;
+  font-size: 16px;
+}
